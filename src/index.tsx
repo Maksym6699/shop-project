@@ -18,11 +18,13 @@ import ReactDOM from 'react-dom/client'
 //         </p>
 //     </div>
 // )
+const Title = () => {
+    return <h1>Hello App Component</h1>
+}
 
-const App = () => {
+const Content = () => {
     return (
-        <div>
-            <h1>Hello App Component</h1>
+        <React.Fragment>
             <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga,
                 repudiandae. Asperiores voluptatem dicta rerum quasi tempora?
@@ -35,7 +37,16 @@ const App = () => {
                 doloremque beatae omnis unde itaque voluptas velit aliquam porro
                 quae dignissimos.
             </p>
-        </div>
+        </React.Fragment>
+    )
+}
+
+const App = () => {
+    return (
+        <>
+            <Title />
+            <Content />
+        </>
     )
 }
 
