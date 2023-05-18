@@ -6,6 +6,7 @@ import ReactDOM from 'react-dom/client'
 
 // const app = React.createElement("div", null, React.createElement('p', {id: 'test',}, 'Hello p'))
 
+// JSX
 const app = (
     <div>
         <h1 id="test">Hello App</h1>
