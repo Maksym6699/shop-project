@@ -2,25 +2,12 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './style.css'
 
-// React element
-// const title = React.createElement('h1', { id: 'title' }, 'Hello React')
+interface TitleProps {
+    title: string
+}
 
-// const app = React.createElement("div", null, React.createElement('p', {id: 'test',}, 'Hello p'))
-
-// JSX
-// const app = (
-//     <div>
-//         <h1 id="test">Hello App</h1>
-//         <p>
-//             Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-//             aliquid explicabo iusto ratione natus voluptatibus vero labore
-//             error. Laboriosam neque corporis explicabo? Pariatur libero veniam
-//             fuga atque dolore expedita impedit.
-//         </p>
-//     </div>
-// )
-const Title = () => {
-    return <h1>Hello App Component</h1>
+const Title = (props: TitleProps) => {
+    return <h1>Hello {props.title} Component</h1>
 }
 
 const Content = () => {
@@ -45,7 +32,8 @@ const Content = () => {
 const App = () => {
     return (
         <>
-            <Title />
+            <Title title="App" />
+            <Title title="React" />
             <Content />
         </>
     )
