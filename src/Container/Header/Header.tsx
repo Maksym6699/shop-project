@@ -12,12 +12,13 @@ import { green } from '@mui/material/colors'
 type Props = {}
 
 const Header = (props: Props) => {
+    const appBar = true
     return (
         <AppBar
             position="static"
             className="app-bar"
-            sx={{
-                backgroundColor: 'green',
+            style={{
+                backgroundColor: appBar ? 'green' : 'purple',
             }}
         >
             <Container>
