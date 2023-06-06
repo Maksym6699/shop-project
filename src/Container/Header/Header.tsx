@@ -10,9 +10,14 @@ import Menu from 'Menu/Menu'
 import { green } from '@mui/material/colors'
 import CartHeader from 'components/CartHeader/CartHeader'
 
-type Props = {}
+type Props = {
+    cartDate: {
+        totalCount: number
+        totalPrice: number
+    }
+}
 
-const Header = (props: Props) => {
+const Header = ({ cartDate }: Props) => {
     const appBar = true
     return (
         <AppBar
@@ -35,7 +40,7 @@ const Header = (props: Props) => {
                     </IconButton>
                     <Logo />
                     <Menu />
-                    <CartHeader />
+                    <CartHeader cartDate={cartDate} />
                 </Toolbar>
             </Container>
         </AppBar>
